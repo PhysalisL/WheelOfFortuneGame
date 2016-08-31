@@ -3,6 +3,7 @@ import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -21,6 +22,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 
 
@@ -53,12 +55,12 @@ public class WheelOfFortune extends Application{
 	private Text AIStatus = new Text("............");
 	private TextField letterInput = new TextField();
 	private TextField stringInput = new TextField();
-	private ImageView background = new ImageView(getClass().getResource("bg4.png").toString());
-	private ImageView startMenu = new ImageView(getClass().getResource("bg2.png").toString());
-	private MediaPlayer bgm = new MediaPlayer(new Media(getClass().getResource("bgm.mp3").toString()));
-	private AudioClip doorOpen = new AudioClip(getClass().getResource("DoorOpen.wav").toString());
-	private AudioClip doorClose = new AudioClip(getClass().getResource("DoorClose.wav").toString());
-	private AudioClip finalAnswer = new AudioClip(getClass().getResource("redtruth.wav").toString());
+	private ImageView background = new ImageView(getClass().getResource("assets/bg4.png").toString());
+	private ImageView startMenu = new ImageView(getClass().getResource("assets/bg2.png").toString());
+	private MediaPlayer bgm = new MediaPlayer(new Media(getClass().getResource("assets/bgm.mp3").toString()));
+	private AudioClip doorOpen = new AudioClip(getClass().getResource("assets/DoorOpen.wav").toString());
+	private AudioClip doorClose = new AudioClip(getClass().getResource("assets/DoorClose.wav").toString());
+	private AudioClip finalAnswer = new AudioClip(getClass().getResource("assets/redtruth.wav").toString());
 	private DropShadow shadowEffect  = new DropShadow(20, Color.BLACK);
 	private Text finalAnswerTxt = new Text("FINAL ANSWER!");
 	private Text rightOrDieTxt = new Text("RIGHT OR  DIE!");

@@ -28,14 +28,14 @@ public class GuessingBoard {
 	private int remainingLetters;
 	private String[]orderedList = {"E","N","A","I","O","H","R","T","S","L",
 			"F","C","D","U","G","K","P","Y","M","B","V","W","J"};
-	private AudioClip right = new AudioClip(getClass().getResource("right.wav").toString());
-	private AudioClip wrong = new AudioClip(getClass().getResource("wrong.wav").toString());
-	private AudioClip theEnd = new AudioClip(getClass().getResource("Gunshot.wav").toString());
+	private AudioClip right = new AudioClip(getClass().getResource("assets/right.wav").toString());
+	private AudioClip wrong = new AudioClip(getClass().getResource("assets/wrong.wav").toString());
+	private AudioClip theEnd = new AudioClip(getClass().getResource("assets/Gunshot.wav").toString());
 	
 	public GuessingBoard(){
 		pane = new Pane();
 		try {
-			wordStorage = new WordList("WordFile.txt");
+			wordStorage = new WordList("assets/WordFile.txt");
 		} catch (Exception e) {e.printStackTrace();}
 		generate();
 	}

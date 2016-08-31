@@ -26,12 +26,12 @@ public class FortuneWheel{
 	private final int BANKRUPT = 1;
 	private final int LOSETURN = 2;
 	private final int MONEYANDFREETURN = 3;
-	private AudioClip clickSound = new AudioClip(getClass().getResource("wheelTurn.wav").toString());
+	private AudioClip clickSound = new AudioClip(getClass().getResource("assets/wheelTurn.wav").toString());
 
 	public FortuneWheel(double wheelHeight){
 		pane = new Pane();
-		wheelImg = new ImageView(getClass().getResource("wheel.png").toString());
-		arrow = new ImageView(getClass().getResource("arrow.png").toString());
+		wheelImg = new ImageView(getClass().getResource("assets/wheel.png").toString());
+		arrow = new ImageView(getClass().getResource("assets/arrow.png").toString());
 		path = new RotateTransition();
 		pointer = new Line(60, 335, 60, 335);
 		slots = new Circle[24];
